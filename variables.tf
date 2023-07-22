@@ -17,7 +17,7 @@ variable "name" {
 }
 
 variable "policy_arns" {
-    default = "arn:aws:iam::aws:policy/AdministratorAccess"
+    default = "arn:aws:iam::aws:policy/ReadOnlyAccess"
     type = string
     description = "ARN of policy to be associated with the created IAM user"
 }
