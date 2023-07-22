@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.60.0"
+    }
+  }
+}
 
 provider "aws" {
     region = "${var.region}"
@@ -10,6 +18,6 @@ resource "aws_iam_user" "will_user" {
 }
 
 resource "aws_iam_user_policy_attachment" "attach-will_user" {
-    user = "${aws_iam_user.user.name}"
+    user = "${aws_iam_user.will_user.name}"
     policy_arn = var.policy_arns
 }

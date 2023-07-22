@@ -12,7 +12,7 @@ variable "region" {
 
 variable "name" {
     default = "calaman"
-    type = "string"
+    type = string
     description = "The name of the user"
 }
 
